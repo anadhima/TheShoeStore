@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">The Shoe Store</string>
+    <string name="your_email">Your email</string>
+    <string name="your_password">Your Password</string>
+    <string name="login">Login</string>
+    <string name="register">"Register "</string>
+    <string name="welcome_text">Welcome!!</string>
+    <string name="instructions">Instruction</string>
+    <string name="lets_organise_your_shoes">Let\'s organise your shoes together</string>
+    <string name="e_mail">E-mail</string>
+    <string name="password">Password</string>
+    <string name="shoe_list">Shoe List</string>
+    <string name="title_instruction">How it works</string>
+    <string name="text_instructions">There are a wide variety of different types of shoes \n  For example, boots, athletic shoes \n </string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
