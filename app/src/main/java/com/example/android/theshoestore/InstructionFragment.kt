@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
+import androidx.navigation.fragment.findNavController
 import com.example.android.theshoestore.R
 import com.example.android.theshoestore.databinding.FragmentInstructionBinding
 import com.example.android.theshoestore.databinding.FragmentLoginBinding
@@ -26,8 +27,12 @@ class InstructionFragment : Fragment() {
         binding.lifecycleOwner=this
 
 
+
         return binding.root
 
     }
 
+    fun navToShoeList(){
+        findNavController().navigate(R.id.action_instructionFragment_to_shoeListFragment)
+    }
 }

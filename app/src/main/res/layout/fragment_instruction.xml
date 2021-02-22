@@ -53,6 +53,7 @@
                 android:layout_marginTop="16dp"
                 android:background="@drawable/custom_button"
                 android:text="@string/shoe_list"
+                android:onClick="@{()->instruction.navToShoeList()}"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
