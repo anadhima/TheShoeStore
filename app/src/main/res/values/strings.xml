@@ -14,4 +14,12 @@
     <string name="text_instructions">There are a wide variety of different types of shoes \n  For example, boots, athletic shoes \n </string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="logout">Logout</string>
+    <string name="cancel">Cancel</string>
+    <string name="save">Save</string>
+    <string name="description">Description</string>
+    <string name="size">Size</string>
+    <string name="company">Company</string>
+    <string name="name">Name</string>
+    <string name="add_image">Add image</string>
 </resources>
