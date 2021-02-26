@@ -2,15 +2,12 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".screens.shoelist.ShoeListFragment">
+    tools:context=".ui.ShoeListFragment">
 
     <data>
-        <variable
-            name="shoeListF"
-            type="com.example.android.theshoestore.screens.shoelist.ShoeListFragment" />
 
         <variable
-            name="shoeList"
+            name="listViewModel"
             type="com.example.android.theshoestore.models.ShoeListViewModel" />
     </data>
 
@@ -26,6 +23,7 @@
 
 
             <LinearLayout
+                android:id="@+id/list_liner_layout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
@@ -41,7 +39,6 @@
             android:layout_margin="25dp"
             android:clickable="true"
             android:focusable="true"
-            android:onClick="@{()->shoeListF.navToShoeDetails()}"
             android:src="@drawable/add"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent" />

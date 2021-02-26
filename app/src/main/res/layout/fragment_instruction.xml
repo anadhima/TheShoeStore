@@ -2,13 +2,13 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".InstructionFragment">
+    tools:context=".ui.InstructionFragment">
 
     <data>
 
         <variable
-            name="instruction"
-            type="com.example.android.theshoestore.InstructionFragment" />
+            name="instructionViewModel"
+            type="com.example.android.theshoestore.ui.InstructionFragment" />
     </data>
 
     <ScrollView
@@ -53,7 +53,7 @@
                 android:layout_marginTop="16dp"
                 android:background="@drawable/custom_button"
                 android:text="@string/shoe_list"
-                android:onClick="@{()->instruction.navToShoeList()}"
+                android:onClick="@{()->instructionViewModel.navToShoeList()}"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"

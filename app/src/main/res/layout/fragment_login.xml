@@ -2,11 +2,11 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".screens.login.LoginFragment">
+    tools:context=".ui.LoginFragment">
  <data>
 <variable
-    name="login"
-    type="com.example.android.theshoestore.screens.login.LoginFragment" />
+    name="loginViewModel"
+    type="com.example.android.theshoestore.ui.LoginFragment" />
  </data>
 
    <androidx.constraintlayout.widget.ConstraintLayout
@@ -85,7 +85,7 @@
         style="@style/TextStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:onClick="@{()->login.navToWelcomeFragment()}"
+        android:onClick="@{()->loginViewModel.navToWelcomeFragment()}"
         android:text="@string/register"
         android:background="@drawable/custom_button"
         app:layout_constraintBottom_toBottomOf="parent"

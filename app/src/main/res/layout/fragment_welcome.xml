@@ -3,12 +3,12 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".WelcomeFragment">
+    tools:context=".ui.WelcomeFragment">
 
     <data>
         <variable
-            name="welcome"
-            type="com.example.android.theshoestore.WelcomeFragment" />
+            name="welcomeViewModel"
+            type="com.example.android.theshoestore.ui.WelcomeFragment" />
     </data>
 <androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
@@ -67,7 +67,7 @@
         android:background="@drawable/custom_button"
         android:fontFamily="@font/amiko"
         android:text="@string/instructions"
-        android:onClick="@{()->welcome.navToInstructionFragment()}"
+        android:onClick="@{()->welcomeViewModel.navToInstructionFragment()}"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

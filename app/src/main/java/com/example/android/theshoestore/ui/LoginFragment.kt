@@ -1,4 +1,4 @@
-package com.example.android.theshoestore.screens.login
+package com.example.android.theshoestore.ui
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -24,7 +24,7 @@ class LoginFragment : Fragment() {
             inflater, R.layout.fragment_login, container, false
         )
 
-        binding.login = this
+        binding.loginViewModel = this
         binding.lifecycleOwner = this
 
         //Navigate to WelcomeFragment from Login button

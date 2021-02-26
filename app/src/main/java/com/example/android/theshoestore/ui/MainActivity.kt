@@ -1,9 +1,8 @@
-package com.example.android.theshoestore
+package com.example.android.theshoestore.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
-import android.view.MenuInflater
 import android.view.MenuItem
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.navigation.NavController
@@ -13,8 +12,8 @@ import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.NavigationUI
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
+import com.example.android.theshoestore.R
 import kotlinx.android.synthetic.main.activity_main.*
-import java.util.zip.Inflater
 
 class MainActivity : AppCompatActivity() {
     private lateinit var navController: NavController

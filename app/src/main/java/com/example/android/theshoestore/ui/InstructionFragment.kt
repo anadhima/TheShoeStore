@@ -1,4 +1,4 @@
-package com.example.android.theshoestore
+package com.example.android.theshoestore.ui
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -9,7 +9,6 @@ import androidx.databinding.DataBindingUtil
 import androidx.navigation.fragment.findNavController
 import com.example.android.theshoestore.R
 import com.example.android.theshoestore.databinding.FragmentInstructionBinding
-import com.example.android.theshoestore.databinding.FragmentLoginBinding
 
 
 class InstructionFragment : Fragment() {
@@ -23,7 +22,7 @@ class InstructionFragment : Fragment() {
         // Inflate the layout for this fragment
         val binding: FragmentInstructionBinding = DataBindingUtil.inflate(
             inflater, R.layout.fragment_instruction, container, false)
-        binding.instruction= this
+        binding.instructionViewModel= this
         binding.lifecycleOwner=this
 
 

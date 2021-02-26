@@ -2,12 +2,12 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".screens.shoedetails.ShoeDetailsFragment">
+    tools:context=".ui.ShoeDetailsFragment">
 
     <data>
         <variable
-            name="shoeDetails"
-            type="com.example.android.theshoestore.screens.shoedetails.ShoeDetailsFragment" />
+            name="detailsViewModel"
+            type="com.example.android.theshoestore.models.ShoeListViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -110,6 +110,7 @@
             android:drawablePadding="12dp"
             android:ems="10"
             android:hint="@string/description"
+
             android:inputType="textPersonName"
             android:padding="12dp"
             app:layout_constraintEnd_toEndOf="parent"
