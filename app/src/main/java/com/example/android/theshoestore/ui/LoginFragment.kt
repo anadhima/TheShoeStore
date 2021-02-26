@@ -33,7 +33,6 @@ class LoginFragment : Fragment() {
         )
 
 
-
         return binding.root
     }
     //Navigate to WelcomeFragment
