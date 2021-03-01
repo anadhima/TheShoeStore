@@ -5,6 +5,9 @@
     tools:context=".ui.ShoeListFragment">
 
     <data>
+        <variable
+            name="shoeList"
+            type="com.example.android.theshoestore.ui.ShoeListFragment" />
 
         <variable
             name="listViewModel"

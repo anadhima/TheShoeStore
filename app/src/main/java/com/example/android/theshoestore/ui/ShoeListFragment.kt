@@ -7,18 +7,16 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
+import androidx.lifecycle.Observer
 import androidx.navigation.Navigation
-import androidx.navigation.fragment.findNavController
 import com.example.android.theshoestore.R
 import com.example.android.theshoestore.databinding.FragmentShoeListBinding
 import com.example.android.theshoestore.models.Shoe
 import com.example.android.theshoestore.models.ShoeListViewModel
-import timber.log.Timber
 
 
 class ShoeListFragment : Fragment() {
 
-    private lateinit var shoe: Shoe
     private val viewModel: ShoeListViewModel by activityViewModels()
 
     override fun onCreateView(
@@ -34,18 +32,14 @@ class ShoeListFragment : Fragment() {
         binding.lifecycleOwner = this
 
 
-        // val inflatedView = View.inflate(context, R.layout.fragment_shoe_list, list_liner_layout)
 
 
-        viewModel.shoes.observe(viewLifecycleOwner, { shoesList ->
-            for (shoes in shoesList) {
-                val listItemBinding: FragmentShoeListBinding = DataBindingUtil.inflate(
-                    inflater,
-                    R.layout.fragment_shoe_list,
-                    container,
-                    false
-                )
-              
+        viewModel.shoes.observe(viewLifecycleOwner, Observer { shoeList ->
+           // for (shoes in shoesList) {
+            shoeList.forEach { shoe ->
+              val listItemBinding = DataBindingUtil.inflate<>()
+
+                listItemBinding.
                 //Add to  LinearLayout
                 binding.listLinerLayout.addView(listItemBinding.root)
             }
@@ -62,9 +56,4 @@ class ShoeListFragment : Fragment() {
 
     }
 
-    /*//Navigate to DetailsFragment
-    fun navToShoeDetails() {
-        findNavController().navigate(R.id.action_shoeListFragment_to_shoeDetailsFragment)
-        Timber.i("navToShoeDetails")
-    }*/
 }

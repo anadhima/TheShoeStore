@@ -48,8 +48,6 @@
         android:name="com.example.android.theshoestore.ui.ShoeDetailsFragment"
         android:label="Shoe Details"
         tools:layout="@layout/fragment_shoe_details" >
-        <action
-            android:id="@+id/action_shoeDetailsFragment_to_shoeListFragment"
-            app:destination="@id/shoeListFragment" />
+
     </fragment>
 </navigation>

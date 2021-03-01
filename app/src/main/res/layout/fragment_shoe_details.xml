@@ -6,8 +6,14 @@
 
     <data>
         <variable
+            name="details"
+            type="com.example.android.theshoestore.ui.ShoeDetailsFragment" />
+        <variable
             name="detailsViewModel"
             type="com.example.android.theshoestore.models.ShoeListViewModel" />
+        <variable
+            name="newShoe"
+            type="com.example.android.theshoestore.models.Shoe" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -44,6 +50,7 @@
         <EditText
             android:id="@+id/name"
             style="@style/TextStyle"
+            android:text="@{newShoe.name}"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/small_margin"
@@ -63,6 +70,7 @@
         <EditText
             android:id="@+id/company"
             style="@style/TextStyle"
+            android:text="@{newShoe.company}"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/small_margin"
@@ -82,6 +90,7 @@
         <EditText
             android:id="@+id/shoe_size"
             style="@style/TextStyle"
+            android:text="@{Double.toString(newShoe.size)}"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/small_margin"
@@ -101,6 +110,7 @@
         <EditText
             android:id="@+id/description"
             style="@style/TextStyle"
+            android:text="@{newShoe.description}"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/small_margin"
@@ -125,6 +135,7 @@
             android:layout_height="wrap_content"
             android:background="@drawable/custom_button"
             android:text="@string/save"
+            android:onClick="@{()->details.addShoe()}"
             app:layout_constraintBaseline_toBaselineOf="@+id/cancel"
             app:layout_constraintEnd_toStartOf="@+id/cancel"
             app:layout_constraintHorizontal_bias="0.5"
