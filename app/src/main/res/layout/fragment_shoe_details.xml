@@ -5,12 +5,13 @@
     tools:context=".ui.ShoeDetailsFragment">
 
     <data>
+
+        <import type="com.example.android.theshoestore.models.ShoeListViewModel.Converter" />
+
         <variable
             name="details"
-            type="com.example.android.theshoestore.ui.ShoeDetailsFragment" />
-        <variable
-            name="detailsViewModel"
             type="com.example.android.theshoestore.models.ShoeListViewModel" />
+
         <variable
             name="newShoe"
             type="com.example.android.theshoestore.models.Shoe" />
@@ -24,7 +25,7 @@
 
         <TextView
             android:id="@+id/textView"
-            style="@style/TextStyle"
+            style="@style/textStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="50dp"
@@ -49,8 +50,7 @@
 
         <EditText
             android:id="@+id/name"
-            style="@style/TextStyle"
-            android:text="@{newShoe.name}"
+            style="@style/textStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/small_margin"
@@ -62,6 +62,7 @@
             android:hint="@string/name"
             android:inputType="textPersonName"
             android:padding="12dp"
+            android:text="@={newShoe.name}"
             app:layout_constraintBottom_toTopOf="@+id/company"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -69,8 +70,7 @@
 
         <EditText
             android:id="@+id/company"
-            style="@style/TextStyle"
-            android:text="@{newShoe.company}"
+            style="@style/textStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/small_margin"
@@ -82,6 +82,7 @@
             android:hint="@string/company"
             android:inputType="textPersonName"
             android:padding="12dp"
+            android:text="@={newShoe.company}"
             app:layout_constraintBottom_toTopOf="@+id/shoe_size"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -89,8 +90,7 @@
 
         <EditText
             android:id="@+id/shoe_size"
-            style="@style/TextStyle"
-            android:text="@{Double.toString(newShoe.size)}"
+            style="@style/textStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/small_margin"
@@ -102,6 +102,7 @@
             android:hint="@string/size"
             android:inputType="number"
             android:padding="12dp"
+            android:text="@={Converter.doubleToString(newShoe.size)}"
             app:layout_constraintBottom_toTopOf="@+id/description"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -109,8 +110,7 @@
 
         <EditText
             android:id="@+id/description"
-            style="@style/TextStyle"
-            android:text="@{newShoe.description}"
+            style="@style/textStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/small_margin"
@@ -120,9 +120,10 @@
             android:drawablePadding="12dp"
             android:ems="10"
             android:hint="@string/description"
-
             android:inputType="textPersonName"
+
             android:padding="12dp"
+            android:text="@={newShoe.description}"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.505"
             app:layout_constraintStart_toStartOf="parent"
@@ -130,12 +131,12 @@
 
         <Button
             android:id="@+id/save"
-            style="@style/TextStyle"
+            style="@style/textStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/custom_button"
             android:text="@string/save"
-            android:onClick="@{()->details.addShoe()}"
+            android:onClick="@{()->details.saveDetail(newShoe)}"
             app:layout_constraintBaseline_toBaselineOf="@+id/cancel"
             app:layout_constraintEnd_toStartOf="@+id/cancel"
             app:layout_constraintHorizontal_bias="0.5"
@@ -143,7 +144,7 @@
 
         <Button
             android:id="@+id/cancel"
-            style="@style/TextStyle"
+            style="@style/textStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/custom_button"

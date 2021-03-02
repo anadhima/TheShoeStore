@@ -6,6 +6,9 @@
 
     <data>
         <variable
+            name="newShoe"
+            type="com.example.android.theshoestore.models.Shoe" />
+        <variable
             name="shoeList"
             type="com.example.android.theshoestore.ui.ShoeListFragment" />
 

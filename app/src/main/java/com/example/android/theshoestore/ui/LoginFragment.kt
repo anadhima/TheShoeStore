@@ -1,5 +1,6 @@
 package com.example.android.theshoestore.ui
 
+
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -38,7 +39,11 @@ class LoginFragment : Fragment() {
     //Navigate to WelcomeFragment
     fun navToWelcomeFragment() {
         findNavController().navigate(R.id.action_loginFragment_to_welcomeFragment)
+
+
     }
+
+
 
 }
 

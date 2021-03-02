@@ -11,8 +11,7 @@
     <string name="password">Password</string>
     <string name="shoe_list">Shoe List</string>
     <string name="title_instruction">How it works</string>
-    <string name="text_instructions">There are a wide variety of different types of shoes \n  For example, boots, athletic shoes \n </string>
-    <!-- TODO: Remove or change this placeholder text -->
+    <string name="text_instructions">There are a wide variety of different types of shoes \n  For example, boots, athletic shoes \n With this app we are going to organise all your shoes together \n </string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="logout">Logout</string>
     <string name="cancel">Cancel</string>

@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
+import androidx.lifecycle.Observer
 import androidx.navigation.Navigation
 import androidx.navigation.fragment.findNavController
 import com.example.android.theshoestore.R
@@ -30,27 +31,28 @@ class ShoeDetailsFragment : Fragment() {
             inflater, R.layout.fragment_shoe_details, container, false
         )
 
-      /*  //Navigate to ListFragment from save button
-        binding.save.setOnClickListener(
-            Navigation.createNavigateOnClickListener(R.id.action_shoeDetailsFragment_to_shoeListFragment)
-        )
+
+
+        binding.details= viewModel
+        binding.lifecycleOwner = this
+        binding.newShoe = Shoe("",0.0,"","")
 
         //Navigate to ListFragment from cancel button
         binding.cancel.setOnClickListener (
             Navigation.createNavigateOnClickListener(R.id.action_shoeDetailsFragment_to_shoeListFragment)
-        )*/
+        )
 
-
-        binding.details= this
-        binding.lifecycleOwner = this
-        binding.newShoe = Shoe("",0.0,"","")
+        //Navigate to ListFragment from save button
+       viewModel.newShoeAdded.observe(viewLifecycleOwner, Observer { shoeAdded ->
+            if (shoeAdded){
+                findNavController().navigate(R.id.action_shoeDetailsFragment_to_shoeListFragment)
+                viewModel.newShoeAddedFinish()
+            }
+        })
 
         return binding.root
 
     }
-    fun addShoe(){
-       viewModel.saveDetail(binding.newShoe)
-        findNavController().navigateUp()
-    }
+
 
 }

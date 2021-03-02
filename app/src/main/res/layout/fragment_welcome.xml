@@ -17,16 +17,16 @@
 
     <TextView
         android:id="@+id/welcome_text"
-        style="@style/TextStyle"
+        style="@style/welcomeText"
+        android:textSize="@dimen/text_size"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
         android:layout_marginTop="80dp"
         android:layout_marginEnd="10dp"
-        android:fontFamily="@font/alex_brush"
         android:text="@string/welcome_text"
         android:textAlignment="center"
-        android:textSize="50sp"
+
         app:layout_constraintBottom_toTopOf="@+id/imageView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -44,14 +44,13 @@
 
     <TextView
         android:id="@+id/lets_organise_text"
-        style="@style/TextStyle"
+        style="@style/welcomeText"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="28dp"
-        android:fontFamily="@font/alex_brush"
         android:text="@string/lets_organise_your_shoes"
         android:textAlignment="center"
-        android:textSize="50sp"
+        android:textSize="@dimen/text_size"
         app:layout_constraintBottom_toTopOf="@+id/button_to_instruction"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -60,12 +59,11 @@
 
     <Button
         android:id="@+id/button_to_instruction"
-        style="@style/TextStyle"
+        style="@style/textStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="112dp"
         android:background="@drawable/custom_button"
-        android:fontFamily="@font/amiko"
         android:text="@string/instructions"
         android:onClick="@{()->welcomeViewModel.navToInstructionFragment()}"
         app:layout_constraintBottom_toBottomOf="parent"

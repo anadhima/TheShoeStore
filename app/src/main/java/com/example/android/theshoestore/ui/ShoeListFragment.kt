@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.LinearLayout
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
@@ -11,7 +12,7 @@ import androidx.lifecycle.Observer
 import androidx.navigation.Navigation
 import com.example.android.theshoestore.R
 import com.example.android.theshoestore.databinding.FragmentShoeListBinding
-import com.example.android.theshoestore.models.Shoe
+import com.example.android.theshoestore.databinding.ShoeItemBinding
 import com.example.android.theshoestore.models.ShoeListViewModel
 
 
@@ -33,15 +34,17 @@ class ShoeListFragment : Fragment() {
 
 
 
-
         viewModel.shoes.observe(viewLifecycleOwner, Observer { shoeList ->
-           // for (shoes in shoesList) {
             shoeList.forEach { shoe ->
-              val listItemBinding = DataBindingUtil.inflate<>()
-
-                listItemBinding.
+                val shoeItemBinding = DataBindingUtil.inflate<ShoeItemBinding>(
+                    inflater,
+                    R.layout.shoe_item,
+                    container,
+                    false
+                )
+                shoeItemBinding.newShoe = shoe
                 //Add to  LinearLayout
-                binding.listLinerLayout.addView(listItemBinding.root)
+                binding.listLinerLayout.addView(shoeItemBinding.root)
             }
 
         })
