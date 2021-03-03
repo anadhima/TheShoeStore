@@ -16,6 +16,9 @@
         android:layout_height="match_parent"
         android:fillViewport="true">
 
+        <!-- Using ConstraintLayout because simplifies creating layouts like this one  even thought we
+        could had use LinearLayout as well -->
+
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"

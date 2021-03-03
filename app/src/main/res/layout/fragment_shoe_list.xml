@@ -17,10 +17,12 @@
             type="com.example.android.theshoestore.models.ShoeListViewModel" />
     </data>
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+  <!--Using FrameLayout  because simplifies displaying a single views
+  at a specific area on the screen (FAB)  -->
 
+<FrameLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
         <ScrollView
             android:layout_width="match_parent"
@@ -46,8 +48,7 @@
             android:clickable="true"
             android:focusable="true"
             android:src="@drawable/add"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent" />
+            android:layout_gravity="bottom|end"/>
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>
 </layout>

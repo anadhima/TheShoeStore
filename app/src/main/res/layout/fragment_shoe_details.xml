@@ -17,6 +17,8 @@
             type="com.example.android.theshoestore.models.Shoe" />
     </data>
 
+    <!-- Using ConstraintLayout because simplifies creating complex layouts like this one-->
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -135,8 +137,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/custom_button"
-            android:text="@string/save"
             android:onClick="@{()->details.saveDetail(newShoe)}"
+            android:text="@string/save"
             app:layout_constraintBaseline_toBaselineOf="@+id/cancel"
             app:layout_constraintEnd_toStartOf="@+id/cancel"
             app:layout_constraintHorizontal_bias="0.5"
